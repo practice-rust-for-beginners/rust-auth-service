@@ -4,7 +4,7 @@
 > A REST‑based user authentication service built in **Rust** using **Axum 0.7** and an **in‑memory database**, including a simple HTML UI for signup, login, password reset, and landing page.
 
 **Maintainer:** [Aditya Pratap Bhuyan](https://linkedin.com/in/adityabhuyan)  
-**Repository:** https://github.com/practice-rust-for-beginners/rust-auth-service  
+**Repository:** [RUST Auth Service](https://github.com/practice-rust-for-beginners/rust-auth-service)  
 **License:** GNU GPL v3 (or later)
 
 ---
