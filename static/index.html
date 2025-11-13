@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head><title>Login</title></head>
+<body>
+<h1>Login</h1>
+<form id="loginForm">
+  <input type="text" id="username" placeholder="Username" />
+  <input type="password" id="password" placeholder="Password" />
+  <button type="submit">Login</button>
+</form>
+<a href="/signup.html">Sign Up</a> | <a href="/reset_password.html">Reset Password</a>
+
+<script>
+document.getElementById('loginForm').addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const res = await fetch('/login', {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify({
+      username: document.getElementById('username').value,
+      password: document.getElementById('password').value
+    })
+  });
+  const message = await res.text();
+if (message.includes("Login successful")) {
+  window.location.href = "/landing.html";
+} else {
+  alert(message);
+}
+});
+</script>
+</body>
+</html>
